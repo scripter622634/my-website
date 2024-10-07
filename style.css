@@ -1,0 +1,64 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* يمنع التمرير */
+  font-family: Arial, sans-serif; /* خط الصفحة */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يجعل الفيديو يغطي الخلفية بالكامل */
+  z-index: -1; /* يجعل الفيديو خلف المحتوى */
+}
+
+header, section, footer {
+  position: relative;
+  z-index: 1; /* التأكد من أن النص يظهر فوق الفيديو */
+}
+
+.text-background {
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية سوداء بشفافية 50% */
+  padding: 20px; /* مسافة داخلية */
+  border-radius: 10px; /* زوايا مدورة */
+  margin: 20px; /* مسافة خارجية */
+}
+
+h1, h2, p {
+  color: white; /* لون النص */
+}
+
+.skill-item {
+  color: white; /* لون نص المهارات */
+  font-size: 20px; /* حجم النص */
+  margin: 5px 0; /* مسافة بين العناصر */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* التحريك عند الظهور */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* يجعل العنصر مرئيًا بعد التحريك */
+  }
+}
+
+.social-icons {
+  margin-top: 10px; /* مسافة أعلى الأيقونات */
+}
+
+.social-icons a {
+  color: #333; /* لون الأيقونات */
+  margin: 0 10px; /* مسافة بين الأيقونات */
+  text-decoration: none; /* إزالة التسطير */
+  font-size: 24px; /* حجم الأيقونات */
+}
+
+.social-icons a:hover {
+  color: #007BFF; /* لون عند التحويم */
+}
